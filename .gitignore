@@ -1,0 +1,4 @@
+# Ignorar la carpeta __pycache__ dentro de la carpeta models
+models/__pycache__/
+# Ignorar la carpeta __pycache__ en la raíz del proyecto
+__pycache__/

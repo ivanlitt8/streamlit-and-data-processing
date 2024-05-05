@@ -51,13 +51,3 @@ def procesar_conectividad():
         writer = csv.writer(arc)
         writer.writerows(lineas) #Se sobreescriben las lineas de la lista sobre el archivo, dejando los datos modificados correctamente
             
-
-def controlar_archivos (archivo):
-    try: #Si el archivo se abre exitosamente, el programa imprimira en pantalla que el archivo ya existe
-        with open(archivo, "r", encoding='utf-8', newline='') as file:
-            print('El archivo ya existe') #Si el archivo se abre exitosamente, 
-    except: #caso contrario, genera una copia del arhivo original y lo procesa
-        original = Path ("datasets") / "Conectividad_Internet.csv"
-        generar_copia(original)
-        procesar_conectividad()
-        print ('Copia del archivo generada y procesada')

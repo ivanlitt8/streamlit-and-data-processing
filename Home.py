@@ -1,5 +1,9 @@
 import streamlit as st
 
-st.title("Home")
+st.title("Trabajo Integrador - Python")
 
-st.text_input("Text:")
+st.markdown('## Integrantes: ')
+st.markdown("* Ivan Litt")
+st.markdown("* Ramiro Eisenbart Veloz")
+st.markdown("* Augusto Cruz")
+st.markdown("* Isidro Valtueña")

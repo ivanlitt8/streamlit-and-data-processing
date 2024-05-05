@@ -70,6 +70,3 @@ def main():
     opcion_elegida = elegir_opcion()
     print("Ha elegido la altura:", opcion_elegida)
     procesar_archivo(archivo_csv, opcion_elegida)
-
-if __name__ == "__main__":
-    main()

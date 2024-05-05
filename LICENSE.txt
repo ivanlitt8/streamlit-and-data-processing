@@ -7,5 +7,4 @@ En la medida en que la renuncia de derechos de autor anterior no sea legalmente 
 No hay garantías implícitas en esta renuncia.
 
 Mayo 2024 
-autores: Iván Litt, Ramiro Eisenbart Veloz, Augusto Cruz, Isidro Valtueña.
-
+autor: Iván Litt

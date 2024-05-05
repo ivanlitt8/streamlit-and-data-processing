@@ -1,39 +1,42 @@
-################## RAMIRO ##################
 from pathlib import Path
-from models import proceso_2
+from models import proceso_1, proceso_2, proceso_3, proceso_4
 
-"""
-En este segmento, traigo el path del archivo nuevo para comparar dentro del proceso controlar archivos
-"""
-path_conectividad = Path ('new_datasets') / "Conectividad_Internet.csv"
-proceso_2.controlar_archivos(path_conectividad)
+
+################## RAMIRO ##################
+def procesar_conectividad():
+    
+    path_conectividad = Path ('datasets') / "Conectividad_Internet.csv"
+    
+    proceso_2.generar_copia(path_conectividad)
+    proceso_2.procesar_conectividad()
+
 
 ################## IVAN ##################
-from models import proceso_1
+def procesar_aeropuertos():
+    
+    ruta_aeropuertos = Path('datasets') / 'ar-airports.csv'
+    ruta_argentina = Path('datasets') / 'ar.csv'
 
-from pathlib import Path
-route1 = Path('datasets') / 'ar-airports.csv'
-route2 = Path('datasets') / 'ar.csv'
+    proceso_1.generar_copia(ruta_aeropuertos)
+    proceso_1.cargar_datos_ar(ruta_argentina)
+    proceso_1.procesar_airports()
 
-proceso_1.generar_copia(route1)
-proceso_1.cargar_datos_ar(route2)
-proceso_1.procesar_airports()
 
 #################### Isidro ######################
 
-from models import proceso_3 
-from pathlib import Path
-ruta_csv = Path ("datasets") / "lagos_arg.csv" # Guarda la ruta del archivo csv en ruta_csv
-proceso_3.procesar_dataset_lagos(ruta_csv, "new_datasets") # Llama a procesar_dataset_lagos enviandole la ruta del dataset original y donde debe guardarlo
+def procesar_lagos ():
+    
+    ruta_csv = Path ("datasets") / "lagos_arg.csv" # Guarda la ruta del archivo csv en ruta_csv
+    ruta_csv_procesada = Path ("new_datasets") / "lagos_arg.csv"
 
+    proceso_3.procesar_dataset_lagos(ruta_csv, ruta_csv_procesada) # Llama a procesar_dataset_lagos enviandole la ruta del dataset original y donde debe guardarlo
 
 ##################### Augusto ####################
 
-from models import proceso_4
-from pathlib import Path
+def procesar_censo ():
 
-ruta_csv= Path ("new_datasets") / "c2022_tp_c_resumen_adaptado.csv"
-ruta_origen = Path ("datasets") / "c2022_tp_c_resumen_adaptado.csv"
+    ruta_csv= Path ("new_datasets") / "c2022_tp_c_resumen_adaptado.csv"
+    ruta_origen = Path ("datasets") / "c2022_tp_c_resumen_adaptado.csv"
 
-proceso_4.crear_copia(ruta_origen)
-proceso_4.procesar_datos_censo(ruta_csv,"new_datasets")
+    proceso_4.crear_copia(ruta_origen)
+    proceso_4.procesar_datos_censo(ruta_csv,"new_datasets")

@@ -82,6 +82,3 @@ def imprimir_aeropuertos_por_provincia(archivo_csv):
         print(f"--- Aeropuertos en {capital} ---")
         for aeropuerto in sorted(aeropuertos): # Se imprimen los aeropuertos ordenados
             print(aeropuerto)
-
-archivo_csv = 'new_datasets/ar-airports.csv'  # Cambia por el nombre de tu archivo CSV
-imprimir_aeropuertos_por_provincia(archivo_csv)

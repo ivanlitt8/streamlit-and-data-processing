@@ -88,6 +88,3 @@ def main():
     altura = pedir_altura()
     opcion_elegida = pedir_opcion()
     procesar_archivo_alturas(archivo_csv, altura, opcion_elegida)
-
-if __name__ == "__main__":
-    main()

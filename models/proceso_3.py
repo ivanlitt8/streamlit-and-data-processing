@@ -20,8 +20,6 @@ def cambiar_coordenadas(coords):
     for character in characters:
         coords_separadas[0] = coords_separadas[0].replace(character, " ")
         coords_separadas[1] = coords_separadas[1].replace(character, " ")
-    coords_separadas[0] = coords_separadas[0].replace("Â", "")
-    coords_separadas[1] = coords_separadas[1].replace("Â", "")
     # Crea listas para la conversion a GS (las listas contienen los grados, minutos y segundos)
     lat_valores = coords_separadas[0].split(" ")
     lon_valores = coords_separadas[1].split(" ")

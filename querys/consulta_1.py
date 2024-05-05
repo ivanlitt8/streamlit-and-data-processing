@@ -1,6 +1,6 @@
 import csv
 
-def obtener_tipos_aeropuerto(archivo_csv, columna):
+def obtener_tipos_aeropuerto(archivo_csv):
     
     """
     Esta función extrae los tipos únicos de aeropuertos presentes en un archivo CSV y los devuelve como una lista.
@@ -9,11 +9,8 @@ def obtener_tipos_aeropuerto(archivo_csv, columna):
         archivo_csv (str): Ruta del archivo CSV que contiene los datos de los aeropuertos.
         columna (int): Índice de la columna en el archivo CSV que contiene el tipo de aeropuerto (contando desde 0).
 
-    Returns:
-        list: Lista de tipos de aeropuertos únicos encontrados en el archivo CSV.
-
     """
-    
+    columna = 2 # Índice de la columna "type"
     tipos_aeropuerto = set()  # Se usa set (conjunto) para evitar duplicados
     
     with open(archivo_csv, newline='', encoding='utf-8') as csvfile:
@@ -24,8 +21,3 @@ def obtener_tipos_aeropuerto(archivo_csv, columna):
             tipos_aeropuerto.add(tipo)  # Se cargan los tipos al conjunto
     
     return list(tipos_aeropuerto) # Se retorna el conjunto
-
-archivo_csv = 'new_datasets/ar-airports.csv'  #Ruta temporal (debe cambiarse con Path)
-columna= 2  # Índice de la columna "type"
-tipos_encontrados = obtener_tipos_aeropuerto(archivo_csv, columna)
-print("Tipos de aeropuerto encontrados:", tipos_encontrados)
