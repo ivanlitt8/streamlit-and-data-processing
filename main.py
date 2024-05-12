@@ -1,8 +1,6 @@
 from pathlib import Path
 from models import proceso_1, proceso_2, proceso_3, proceso_4
 
-
-################## RAMIRO ##################
 def procesar_conectividad():
     
     path_conectividad = Path ('datasets') / "Conectividad_Internet.csv"
@@ -10,8 +8,6 @@ def procesar_conectividad():
     proceso_2.generar_copia(path_conectividad)
     proceso_2.procesar_conectividad()
 
-
-################## IVAN ##################
 def procesar_aeropuertos():
     
     ruta_aeropuertos = Path('datasets') / 'ar-airports.csv'
@@ -21,17 +17,12 @@ def procesar_aeropuertos():
     proceso_1.cargar_datos_ar(ruta_argentina)
     proceso_1.procesar_airports()
 
-
-#################### Isidro ######################
-
 def procesar_lagos ():
     
     ruta_csv = Path ("datasets") / "lagos_arg.csv" # Guarda la ruta del archivo csv en ruta_csv
     ruta_csv_procesada = Path ("new_datasets") / "lagos_arg.csv"
 
     proceso_3.procesar_dataset_lagos(ruta_csv, ruta_csv_procesada) # Llama a procesar_dataset_lagos enviandole la ruta del dataset original y donde debe guardarlo
-
-##################### Augusto ####################
 
 def procesar_censo ():
 

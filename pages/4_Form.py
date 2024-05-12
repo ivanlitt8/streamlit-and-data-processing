@@ -60,13 +60,11 @@ if submitted:
              st.warning("Ya existe un usuario registrado con este mail.")
         else:
             # Sobrescribir el archivo JSON con los datos actualizados
-            existing_data = {
-                email: {
-                    "Nombre de Usuario": username,
-                    "Nombre Completo": full_name,
-                    "Fecha de Nacimiento": str(birth_date),
-                    "Género": gender
-                }
+            existing_data[email] = {
+                "Nombre de Usuario": username,
+                "Nombre Completo": full_name,
+                "Fecha de Nacimiento": str(birth_date),
+                "Género": gender
             }         
             save_data(existing_data, file_path)   # Guardar datos en JSON
             st.success("Usuario registrado exitosamente.") # Informar carga exitosa

@@ -1,8 +1,14 @@
 {
+    "ivanLitt@mail.com": {
+        "Nombre de Usuario": "ivanlt8",
+        "Nombre Completo": "Ivan Litt",
+        "Fecha de Nacimiento": "2024-05-12",
+        "G\u00e9nero": "Masculino"
+    },
     "user@test.com": {
-        "Nombre de Usuario": "Usuario_test",
-        "Nombre Completo": "USER",
-        "Fecha de Nacimiento": "2024-05-03",
-        "G\u00e9nero": "Otro"
+        "Nombre de Usuario": "userTest",
+        "Nombre Completo": "usuario",
+        "Fecha de Nacimiento": "2024-05-24",
+        "G\u00e9nero": "Femenino"
     }
 }
